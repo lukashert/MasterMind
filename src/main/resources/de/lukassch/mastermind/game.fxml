@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lukassch.mastermind.controller.GameController">
+   <Canvas fx:id="canvas" focusTraversable="true" height="800.0" layoutX="-1.0" layoutY="1.0" onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClick" onScroll="#onScroll" width="600.0" />
+   <VBox alignment="CENTER_LEFT" layoutX="600.0" prefHeight="400.0" prefWidth="200.0">
+      <padding>
+         <Insets left="5.0" right="5.0" />
+      </padding>
+      <VBox prefHeight="96.0" prefWidth="200.0">
+         <Label fx:id="statsTime" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="200.0" text="Time: 00:00">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </Label>
+         <Label fx:id="statsTry" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="200.0" text="Trys: 0">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+      </VBox>
+      <Button focusTraversable="false" mnemonicParsing="false" onAction="#onSubmit" prefHeight="40.0" prefWidth="200.0" styleClass="primary-button" stylesheets="@style.css" text="Check">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </Button>
+      <Button focusTraversable="false" layoutX="10.0" layoutY="416.0" mnemonicParsing="false" onAction="#onExit" prefHeight="40.0" prefWidth="200.0" styleClass="outline-button" stylesheets="@style.css" text="New Game">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin></Button>
+      <Button fx:id="mainMenu" focusTraversable="false" layoutX="15.0" layoutY="261.0" mnemonicParsing="false" onAction="#onExit" prefHeight="40.0" prefWidth="200.0" styleClass="outline-button" stylesheets="@style.css" text="Open Main Menu" />
+   </VBox>
+</AnchorPane>
